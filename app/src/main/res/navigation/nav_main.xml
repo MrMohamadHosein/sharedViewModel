@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/personFragment">
+
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="ir.MrMohamadHosein.sharedViewModel.PersonFragment"
+        android:label="fragment_person"
+        tools:layout="@layout/fragment_person" >
+        <action
+            android:id="@+id/action_personFragment_to_myMailFragment"
+            app:destination="@id/myMailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myMailFragment"
+        android:name="ir.MrMohamadHosein.sharedViewModel.MyMailFragment"
+        android:label="fragment_my_mail"
+        tools:layout="@layout/fragment_my_mail" >
+        <action
+            android:id="@+id/action_myMailFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="ir.MrMohamadHosein.sharedViewModel.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+</navigation>
